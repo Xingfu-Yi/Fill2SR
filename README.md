@@ -12,6 +12,12 @@ Official code for **Fill2SR** (ECCV 2026).
 
 Fill2SR repurposes pretrained inpainting diffusion transformers for real-world super-resolution. The Inpainting-Interface Evidence Adapter (IIEA) introduces low-quality image evidence through the model's native inpainting interface, while RCDT constructs training pairs by transferring real degradation patterns to clean images.
 
+## Release Checklist
+
+- [x] Release inference code and the local Gradio demo.
+- [x] Publish the [project website](https://xingfu-yi.github.io/Fill2SR/) on GitHub Pages.
+- [x] Release pretrained weights on Hugging Face and ModelScope.
+
 ![Fill2SR paper teaser](assets/teaser.png)
 
 Explore more results with the [interactive comparisons on our project page](https://xingfu-yi.github.io/Fill2SR/#results).
@@ -33,7 +39,15 @@ pip install -e .
 
 ## Pretrained Models
 
-Download [Fill2SR (Ours-Full)](https://huggingface.co/yixingfu/Fill2SR) and the two base models, [FLUX.1-Fill-dev](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev) and [FLUX.1-Redux-dev](https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev). Request access where required and accept the model terms on each page. Create a [read access token](https://huggingface.co/settings/tokens), using the same account for model access and CLI login.
+Fill2SR inference requires the following three models:
+
+| Model | Hugging Face | ModelScope China |
+| --- | --- | --- |
+| FLUX.1-Fill-dev | [Download](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev) | [Download](https://modelscope.cn/models/black-forest-labs/FLUX.1-Fill-dev) |
+| FLUX.1-Redux-dev | [Download](https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev) | [Download](https://modelscope.cn/models/black-forest-labs/FLUX.1-Redux-dev) |
+| Fill2SR (Ours-Full LoRA) | [Download](https://huggingface.co/yixingfu/Fill2SR) | [Download](https://modelscope.cn/models/yixingfu/Fill2SR) |
+
+Download from Hugging Face by default, or use the ModelScope instructions below. Request access where required and accept the model terms. Create a [read access token](https://huggingface.co/settings/tokens), using the same account for model access and CLI login.
 
 ```bash
 hf auth login
@@ -45,8 +59,6 @@ hf download yixingfu/Fill2SR sr-full.safetensors --local-dir models
 
 <details>
 <summary>Alternative: Download from ModelScope</summary>
-
-The same three models are available on ModelScope China: [Fill2SR (Ours-Full)](https://modelscope.cn/models/yixingfu/Fill2SR), [FLUX.1-Fill-dev](https://modelscope.cn/models/black-forest-labs/FLUX.1-Fill-dev) and [FLUX.1-Redux-dev](https://modelscope.cn/models/black-forest-labs/FLUX.1-Redux-dev).
 
 Use a ModelScope China account, accept the model terms and request access where required. Log in with an access token issued by **modelscope.cn**.
 
