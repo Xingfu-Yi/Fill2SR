@@ -1,0 +1,134 @@
+{
+  "dataset": "RealLQ250",
+  "paper_source": "arXiv appendix, Figs. A3\u2013A6",
+  "examples": [
+    {
+      "id": "113",
+      "title": "Nokia phone",
+      "category": "Objects",
+      "paper_figure": "A5",
+      "paper_row": 4,
+      "input_sha256": "83296ce30d87e8c873c5983a85007f89cc40ab9f7bcc38aa1315ba7cd61a8c28"
+    },
+    {
+      "id": "001",
+      "title": "Warrior portrait",
+      "category": "Illustration",
+      "paper_figure": "A3",
+      "paper_row": 1,
+      "input_sha256": "4204661932afc7519926cf8d29bcb758072c1944ff45b41f5bc3d05cedd7defd"
+    },
+    {
+      "id": "005",
+      "title": "Microchip lettering",
+      "category": "Text",
+      "paper_figure": "A3",
+      "paper_row": 2,
+      "input_sha256": "f78fff93250197399de54e94cbb908be0eae372a2afccac6e0e9fce018ee9019"
+    },
+    {
+      "id": "032",
+      "title": "Wooden walkway",
+      "category": "Nature",
+      "paper_figure": "A3",
+      "paper_row": 3,
+      "input_sha256": "bc2e9cf261fca818769bbbb5fe28de954bba6dabc35a29323de544aa1207a390"
+    },
+    {
+      "id": "041",
+      "title": "Palace architecture",
+      "category": "Architecture",
+      "paper_figure": "A3",
+      "paper_row": 4,
+      "input_sha256": "6d92fc39ff0a37dbceec2705a60966a0a8e5489f91b3011963eee914afaddfcd"
+    },
+    {
+      "id": "050",
+      "title": "City buildings",
+      "category": "Architecture",
+      "paper_figure": "A4",
+      "paper_row": 1,
+      "input_sha256": "2527c766be1913d54b533331852a1318f7f73fe2d5c154ba2b2687c6defccbfa"
+    },
+    {
+      "id": "076",
+      "title": "Archival street scene",
+      "category": "Portraits",
+      "paper_figure": "A4",
+      "paper_row": 2,
+      "input_sha256": "d225e0f748ed8b1100b76b0427c95e5a09cedebd372502559ced37925eb625ef"
+    },
+    {
+      "id": "077",
+      "title": "Aircraft lettering",
+      "category": "Text",
+      "paper_figure": "A4",
+      "paper_row": 3,
+      "input_sha256": "333cb5c9ced01b8e7e452e739b1c2c4c0dfac825a8f4dd4136ec22164d077a61"
+    },
+    {
+      "id": "079",
+      "title": "Orange SUV",
+      "category": "Objects",
+      "paper_figure": "A4",
+      "paper_row": 4,
+      "input_sha256": "89d26e82fea3505d25a98d7639523aca06a710ace660b67d30254feafdc7ea5c"
+    },
+    {
+      "id": "088",
+      "title": "Bus-route display",
+      "category": "Text",
+      "paper_figure": "A5",
+      "paper_row": 1,
+      "input_sha256": "b4db5f0f3b6cd179c384819ed99bbc3be3296882df7748ab2b4b7544b7f26ca0"
+    },
+    {
+      "id": "094",
+      "title": "Panda",
+      "category": "Nature",
+      "paper_figure": "A5",
+      "paper_row": 2,
+      "input_sha256": "5ae5b7d74ff1dd6c3b335bea9c2f48cd6ecd27eb43179ca431144b4392e74964"
+    },
+    {
+      "id": "097",
+      "title": "Anime portrait",
+      "category": "Illustration",
+      "paper_figure": "A5",
+      "paper_row": 3,
+      "input_sha256": "36130b0820dd519de245e182933959946b8c5e6abde591ee1679ebdff334722f"
+    },
+    {
+      "id": "120",
+      "title": "Archival portrait",
+      "category": "Portraits",
+      "paper_figure": "A6",
+      "paper_row": 1,
+      "input_sha256": "8896868d44abd54694ca1d6b37be29b186de337e4e3e39be86a8fd16a284aa8f"
+    },
+    {
+      "id": "137",
+      "title": "Cat",
+      "category": "Nature",
+      "paper_figure": "A6",
+      "paper_row": 2,
+      "input_sha256": "5a85b83a840a38f8af5d47c5fbb47b46549db31688d84433c6cd56bed5aa4599"
+    },
+    {
+      "id": "144",
+      "title": "Bicycle by the beach",
+      "category": "Objects",
+      "paper_figure": "A6",
+      "paper_row": 3,
+      "input_sha256": "57c5c8e5e3255b1c4233c8e48e021ff9e01f10480782a5bc465000a8ff0a1db7"
+    },
+    {
+      "id": "197",
+      "title": "Illustrated street",
+      "category": "Illustration",
+      "paper_figure": "A6",
+      "paper_row": 4,
+      "input_sha256": "9c6fb9f00cbb5db8dfc7b365dc91ae7638a09261b72510e629fb8041e667e0e5"
+    }
+  ]
+}

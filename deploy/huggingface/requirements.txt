@@ -1,0 +1,7 @@
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0
+torchvision==0.26.0
+spaces==0.51.3
+gradio==5.43.1
+huggingface_hub==0.36.2
+-r requirements-core.txt

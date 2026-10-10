@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fill2SR: Repurposing Inpainting Diffusion Transformers for Real-World Super-Resolution. ECCV 2026. Explore interactive Ours-Full results on RealLQ250.">
+  <meta name="theme-color" content="#f8f9fc">
+  <meta property="og:title" content="Fill2SR · ECCV 2026">
+  <meta property="og:description" content="Repurposing Inpainting Diffusion Transformers for Real-World Super-Resolution">
+  <meta property="og:image" content="https://xingfu-yi.github.io/Fill2SR/assets/nokia-comparison.jpg">
+  <title>Fill2SR — ECCV 2026</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%236158df'/%3E%3Cpath d='M21 17h26v7H29v9h15v7H29v16h-8z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="viewer.js"></script>
+  <script type="module" src="paper.js"></script>
+</head>
+<body>
+  <nav class="nav shell" aria-label="Main navigation">
+    <a class="wordmark" href="#">Fill2SR<span class="brand-dot">.</span></a>
+    <a href="https://github.com/Xingfu-Yi/Fill2SR" class="nav-code">GitHub ↗</a>
+  </nav>
+  <main>
+    <header class="hero shell">
+      <p class="eyebrow"><span></span> ECCV 2026</p>
+      <h1>Fill2SR</h1>
+      <p class="paper-title">Repurposing Inpainting Diffusion Transformers<br class="desktop-break"> for Real-World Super-Resolution</p>
+      <p class="authors"><a href="https://github.com/Xingfu-Yi">Xingfu Yi</a><span>·</span>Xiaoxue Yu</p>
+      <div class="resources">
+        <a class="button primary" href="https://doi.org/10.1007/978-3-032-37556-8_24">Paper <span>↗</span></a>
+        <a class="button" href="https://github.com/Xingfu-Yi/Fill2SR">Code <span>↗</span></a>
+        <a class="button" href="https://huggingface.co/yixingfu/Fill2SR">Model weights <span>↗</span></a>
+      </div>
+    </header>
+
+    <section class="teaser shell" aria-label="Paper teaser">
+      <figure class="paper-figure" data-paper-figure="teaser">
+          <button type="button" class="figure-expand" data-figure-title="8× super-resolution across diverse visual content" aria-label="Enlarge figure: 8× super-resolution across diverse visual content"><img src="assets/paper/teaser.webp" width="2400" height="1384" alt="The paper’s teaser: 8× restoration of a character portrait, city buildings and a panda, with corresponding detail crops." loading="eager" decoding="async" fetchpriority="high"><span class="expand-hint" aria-hidden="true">Enlarge ⤢</span></button>
+          <figcaption><p>The paper’s teaser: 8× restoration of a character portrait, city buildings and a panda, with corresponding detail crops.</p><div class="figure-links"><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/assets/teaser.png" target="_blank" rel="noopener">Original PNG ↗</a><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/results/teaser_ultimate.pdf" target="_blank" rel="noopener">PDF ↗</a></div></figcaption>
+        </figure>
+      <p class="research-summary">Fill2SR adapts an inpainting diffusion transformer for <strong>real-world super-resolution</strong>. It brings low-quality image evidence into the model’s native inpainting interface and refines the model with real-degradation training pairs.</p>
+      <div class="section-jump"><a href="#results">Explore interactive results <span>↓</span></a><a href="#comparisons">View paper comparisons <span>↓</span></a></div>
+    </section>
+
+    <section class="results shell" id="results" aria-labelledby="results-title">
+      <div class="section-heading"><div><p class="eyebrow">INTERACTIVE RESULTS</p><h2 id="results-title">Explore the details.</h2></div><p>RealLQ250 examples from the paper.<br>Drag the divider. Zoom into the details.</p></div>
+      <div class="viewer" id="viewer">
+        <div class="viewer-heading"><div><h3 id="example-title">Nokia phone</h3><p id="example-meta">RealLQ250 · 113.png</p></div><span class="model-tag">Ours-Full</span></div>
+        <div class="stage" id="stage" tabindex="0" aria-label="Image comparison. Drag the image to pan after zooming. Use plus and minus to zoom; zero to fit.">
+          <div class="image-layer" id="after-layer"><img id="output-image" alt="Fill2SR output" draggable="false"></div>
+          <div class="image-layer before-layer" id="before-layer"><img id="input-image" alt="Low-quality input" draggable="false"></div>
+          <span class="image-label label-before">Input</span><span class="image-label label-after">Fill2SR <span>(Ours-Full)</span></span>
+          <div class="divider" id="divider" role="slider" tabindex="0" aria-label="Comparison divider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="Input 50 percent, Fill2SR 50 percent"><span class="divider-knob" aria-hidden="true">‹<span></span>›</span></div>
+          <div class="loading" id="loading" role="status">Loading comparison…</div>
+        </div>
+        <div class="viewer-toolbar">
+          <div class="zoom-controls" role="group" aria-label="View controls">
+            <button type="button" id="fit" class="tool active" title="Fit image to window">Fit</button>
+            <button type="button" id="actual" class="tool" title="One output pixel per screen CSS pixel">100%</button>
+            <span class="toolbar-rule"></span>
+            <button type="button" id="zoom-out" class="tool square" aria-label="Zoom out">−</button><output id="zoom-level" aria-label="Zoom level">—</output><button type="button" id="zoom-in" class="tool square" aria-label="Zoom in">+</button>
+          </div>
+          <div class="viewer-actions"><button type="button" id="reset" class="tool">Reset</button><button type="button" id="fullscreen" class="tool" aria-label="Enter fullscreen">Full screen ⛶</button></div>
+        </div>
+      </div>
+      <div class="result-details"><p id="dimensions">256 × 256 → 1,536 × 1,536 px</p><div class="downloads"><a id="download-input" download>Input PNG ↓</a><a id="download-output" download>Output PNG ↓</a></div></div>
+      <p class="viewer-hint">Scroll to zoom while the image is focused · Drag the image to pan · On touchscreens, pinch to zoom</p>
+      <div class="gallery" id="gallery" aria-label="Choose an example"></div>
+      <p class="selection-note">16 inputs from appendix Figs. A3–A6, with Nokia first. The interactive results use Ours-Full, the 2K preset, 28 steps and seed 2026; the paper figures below retain their original 4× results. The input is enlarged only for display. These are generated restorations, not ground-truth images; fine details and text may differ from the original scene.</p>
+      <noscript><p>Enable JavaScript for the interactive comparison. <a href="assets/nokia-comparison.jpg">View the Nokia comparison image</a>.</p></noscript>
+    </section>
+
+    <section class="paper-section shell" id="comparisons" aria-labelledby="comparisons-title">
+      <div class="section-heading"><div><p class="eyebrow">FROM THE PAPER &amp; APPENDIX</p><h2 id="comparisons-title">Qualitative comparisons</h2></div><p>Seven complete comparison figures, shown together. Select any figure to enlarge its matched crops.</p></div>
+      <div class="comparison-summary"><span><strong>5</strong> RealLQ250 appendix figures</span><span><strong>20</strong> real-world example rows</span><a href="#appendix-comparisons">Jump to Figs. A3–A7 ↓</a></div>
+      <div class="comparison-grid" aria-label="Main and synthetic comparisons">
+        <article class="comparison-card"><div class="comparison-card-heading"><p>Main paper · 2× / 4× / 8×</p><h3>Real-world comparisons</h3></div>
+<figure class="paper-figure" data-paper-figure="real_world_comparison">
+          <button type="button" class="figure-expand" data-figure-title="Real-world comparisons" aria-label="Enlarge figure: Real-world comparisons"><img src="assets/paper/real_world_comparison.webp" width="2400" height="2890" alt="Electronic components, a historical portrait and a rose, with matched crops at three scales." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">Enlarge ⤢</span></button>
+          <figcaption><p>Electronic components, a historical portrait and a rose, with matched crops at three scales.</p><div class="figure-links"><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/assets/real_world_comparison.png" target="_blank" rel="noopener">Original PNG ↗</a><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/results/real_world_comparison.pdf" target="_blank" rel="noopener">Figure PDF ↗</a></div></figcaption>
+        </figure>
+        </article>
+        <article class="comparison-card"><div class="comparison-card-heading"><p>Appendix · Fig. A8</p><h3>Synthetic degradations</h3></div>
+<figure class="paper-figure" data-paper-figure="synthetic_comparison">
+          <button type="button" class="figure-expand" data-figure-title="Synthetic degradations" aria-label="Enlarge figure: Synthetic degradations"><img src="assets/paper/synthetic_comparison.webp" width="2400" height="2809" alt="Ceiling artwork, a statue and a skier across D1–D3 (2× / 4× / 8×)." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">Enlarge ⤢</span></button>
+          <figcaption><p>Ceiling artwork, a statue and a skier across D1–D3 (2× / 4× / 8×).</p><div class="figure-links"><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/assets/synthetic_comparison.png" target="_blank" rel="noopener">Original PNG ↗</a><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/results/synthetic_comparison.pdf" target="_blank" rel="noopener">Figure PDF ↗</a></div></figcaption>
+        </figure>
+        </article>
+      </div>
+      <div class="appendix-heading" id="appendix-comparisons"><h3>More comparisons &amp; data synthesis</h3><p>RealLQ250 at 4× · RCDT</p></div>
+      <p class="comparison-methods">The RealLQ250 figures show four scenes each: an input/output overview on the left, followed by crops from LQ, DiffBIR, SUPIR, DreamClear, SeeSR, FaithDiff, DiT4SR and Fill2SR.</p>
+      <div class="comparison-grid appendix-grid" aria-label="RealLQ250 appendix comparisons and RCDT data synthesis">
+        <article class="comparison-card"><div class="comparison-card-heading"><p>Appendix · Fig. A3 · 4×</p><h3>Portrait, electronics &amp; architecture</h3></div>
+<figure class="paper-figure" data-paper-figure="real_world_examples_4">
+          <button type="button" class="figure-expand" data-figure-title="Portrait, electronics &amp; architecture" aria-label="Enlarge figure: Portrait, electronics &amp; architecture"><img src="assets/paper/real_world_examples_4.webp" width="2400" height="3641" alt="A character portrait, electronic component, wooden bridge and architectural detail." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">Enlarge ⤢</span></button>
+          <figcaption><p>A character portrait, electronic component, wooden bridge and architectural detail.</p><div class="figure-links"><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/assets/real_world_examples_4.png" target="_blank" rel="noopener">Original PNG ↗</a><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/results/full_vs_grid_page1.pdf" target="_blank" rel="noopener">Figure PDF ↗</a></div></figcaption>
+        </figure>
+        </article>
+        <article class="comparison-card"><div class="comparison-card-heading"><p>Appendix · Fig. A4 · 4×</p><h3>Buildings, faces &amp; vehicles</h3></div>
+<figure class="paper-figure" data-paper-figure="real_world_examples_1">
+          <button type="button" class="figure-expand" data-figure-title="Buildings, faces &amp; vehicles" aria-label="Enlarge figure: Buildings, faces &amp; vehicles"><img src="assets/paper/real_world_examples_1.webp" width="2400" height="3640" alt="Building details, an archival face, aircraft lettering and a wheel rim." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">Enlarge ⤢</span></button>
+          <figcaption><p>Building details, an archival face, aircraft lettering and a wheel rim.</p><div class="figure-links"><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/assets/real_world_examples_1.png" target="_blank" rel="noopener">Original PNG ↗</a><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/results/full_vs_grid_page2.pdf" target="_blank" rel="noopener">Figure PDF ↗</a></div></figcaption>
+        </figure>
+        </article>
+        <article class="comparison-card"><div class="comparison-card-heading"><p>Appendix · Fig. A5 · 4×</p><h3>Text, wildlife &amp; illustration</h3></div>
+<figure class="paper-figure" data-paper-figure="real_world_examples_2">
+          <button type="button" class="figure-expand" data-figure-title="Text, wildlife &amp; illustration" aria-label="Enlarge figure: Text, wildlife &amp; illustration"><img src="assets/paper/real_world_examples_2.webp" width="2400" height="3640" alt="Bus-route text, a panda, an anime portrait and Nokia phone lettering." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">Enlarge ⤢</span></button>
+          <figcaption><p>Bus-route text, a panda, an anime portrait and Nokia phone lettering.</p><div class="figure-links"><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/assets/real_world_examples_2.png" target="_blank" rel="noopener">Original PNG ↗</a><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/results/full_vs_grid_page4.pdf" target="_blank" rel="noopener">Figure PDF ↗</a></div></figcaption>
+        </figure>
+        </article>
+        <article class="comparison-card"><div class="comparison-card-heading"><p>Appendix · Fig. A6 · 4×</p><h3>Portraits, animals &amp; fine structures</h3></div>
+<figure class="paper-figure" data-paper-figure="real_world_examples_3">
+          <button type="button" class="figure-expand" data-figure-title="Portraits, animals &amp; fine structures" aria-label="Enlarge figure: Portraits, animals &amp; fine structures"><img src="assets/paper/real_world_examples_3.webp" width="2400" height="3640" alt="An old portrait, a cat, a bicycle and a stylized illustration." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">Enlarge ⤢</span></button>
+          <figcaption><p>An old portrait, a cat, a bicycle and a stylized illustration.</p><div class="figure-links"><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/assets/real_world_examples_3.png" target="_blank" rel="noopener">Original PNG ↗</a><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/results/full_vs_grid_page5.pdf" target="_blank" rel="noopener">Figure PDF ↗</a></div></figcaption>
+        </figure>
+        </article>
+        <article class="comparison-card"><div class="comparison-card-heading"><p>Appendix · Fig. A7 · 4×</p><h3>Linework, lettering &amp; natural textures</h3></div>
+<figure class="paper-figure" data-paper-figure="real_world_examples_5">
+          <button type="button" class="figure-expand" data-figure-title="Linework, lettering &amp; natural textures" aria-label="Enlarge figure: Linework, lettering &amp; natural textures"><img src="assets/paper/real_world_examples_5.webp" width="2400" height="3641" alt="A cartoon, banner lettering, a rose and a skateboard scene." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">Enlarge ⤢</span></button>
+          <figcaption><p>A cartoon, banner lettering, a rose and a skateboard scene.</p><div class="figure-links"><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/assets/real_world_examples_5.png" target="_blank" rel="noopener">Original PNG ↗</a><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/results/full_vs_grid_page6.pdf" target="_blank" rel="noopener">Figure PDF ↗</a></div></figcaption>
+        </figure>
+        </article>
+        <article class="comparison-card" id="rcdt"><div class="comparison-card-heading"><p>Data synthesis · Fig. A2</p><h3>RCDT paired data synthesis</h3></div>
+<figure class="paper-figure" data-paper-figure="rcdt_pipeline">
+          <button type="button" class="figure-expand" data-figure-title="RCDT paired data synthesis · Fig. A2" aria-label="Enlarge figure: RCDT paired data synthesis · Fig. A2"><img src="assets/paper/rcdt_pipeline.webp" width="2400" height="1659" alt="Fig. A2: a frozen VLM describes real degradations and adapts them to a clean reference; a frozen image editor synthesizes the paired low-quality image. Prompts in this illustration are abbreviated and paraphrased for readability." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">Enlarge ⤢</span></button>
+          <figcaption><p>Fig. A2: a frozen VLM describes real degradations and adapts them to a clean reference; a frozen image editor synthesizes the paired low-quality image. Prompts in this illustration are abbreviated and paraphrased for readability.</p><div class="figure-links"><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/assets/rcdt_pipeline.png" target="_blank" rel="noopener">Original PNG ↗</a><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/results/RCDT_optimized.pdf" target="_blank" rel="noopener">Figure PDF ↗</a></div></figcaption>
+        </figure></article>
+      </div>
+      <p class="figure-note">Figures are reproduced in full from the paper and arXiv appendix, retaining their original experimental settings and labels. RealLQ250 has no paired ground truth. The interactive examples above use a separate, uniform Ours-Full 2K preset.</p>
+    </section>
+
+    <section class="paper-section shell" id="large-scale" aria-labelledby="large-scale-title">
+      <div class="section-heading"><div><p class="eyebrow">BEYOND SMALL IMAGES</p><h2 id="large-scale-title">Restoration at 12K scale</h2></div><p>From fine linework to calligraphy.<br>Explore the paper’s large-scale artwork example.</p></div>
+<figure class="paper-figure" data-paper-figure="qingming_12k">
+          <button type="button" class="figure-expand" data-figure-title="12K-scale artwork restoration" aria-label="Enlarge figure: 12K-scale artwork restoration"><img src="assets/paper/qingming_12k.webp" width="2400" height="1191" alt="Fig. A1: three regions of the Qingming artwork restored at 12K scale with tiled inference. Colored boxes identify corresponding detail crops." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">Enlarge ⤢</span></button>
+          <figcaption><p>Fig. A1: three regions of the Qingming artwork restored at 12K scale with tiled inference. Colored boxes identify corresponding detail crops.</p><div class="figure-links"><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/assets/qingming_12k.png" target="_blank" rel="noopener">Original PNG ↗</a><a href="https://github.com/Xingfu-Yi/Fill2SR/blob/main/results/supp_12k_2row_grid.pdf" target="_blank" rel="noopener">PDF ↗</a></div></figcaption>
+        </figure>
+    </section>
+
+    <section class="method shell" id="method" aria-labelledby="method-title">
+      <div class="section-heading"><div><p class="eyebrow">THE IDEA</p><h2 id="method-title">From filling regions<br>to restoring images.</h2></div><p>Fill2SR repurposes the generative prior of an inpainting diffusion transformer for real-world super-resolution.</p></div>
+      <div class="method-grid">
+        <article><span class="step">01</span><h3>Repurpose an inpainting model</h3><p>Built on FLUX.1-Fill-dev with FLUX.1-Redux-dev, Fill2SR adapts a pretrained foundation model to restore low-quality images.</p></article>
+        <article><span class="step">02</span><h3>Bring in image evidence</h3><p>The Inpainting-Interface Evidence Adapter (IIEA) places the low-quality observation in the native masked-image slot under a full-image mask.</p></article>
+        <article><span class="step">03</span><h3>Explore Ours-Full</h3><p><a href="#rcdt">RCDT</a> transfers degradation patterns from real images onto clean targets to construct training data. The released Ours-Full LoRA includes this refinement.</p></article>
+      </div>
+      <div class="reproduce"><div><h3>Try it on your own images.</h3><p>Run the same Nokia example or launch the interactive Gradio app.</p></div><a class="button" href="https://github.com/Xingfu-Yi/Fill2SR#inference">Get started <span>↗</span></a></div>
+      <details class="protocol"><summary>Reproduction details &amp; data source</summary><div><p>The 2K preset follows the model’s pixel budget and aspect-ratio handling. For these 256 × 256 inputs, it produces 1,536 × 1,536 outputs; it does not fix the longest edge at 2,048 pixels. Every downloaded PNG is the unmodified source or model output.</p><p>RealLQ250 was released with <a href="https://github.com/shallowdream204/DreamClear">DreamClear</a>. Image rights remain with their respective owners. Our selection is a qualitative showcase, not an aggregate benchmark evaluation.</p><p><a href="gallery.json" download>Download the image manifest</a> for image IDs, hashes, dimensions, model version and sampling parameters. Ours-Base weights, training code and RCDT data generation code are not included in this release.</p><p>The Ours-Full weights are subject to the upstream <a href="https://huggingface.co/yixingfu/Fill2SR/blob/main/LICENSE.md">FLUX.1 [dev] Non-Commercial License</a>. See the <a href="https://github.com/Xingfu-Yi/Fill2SR#license-and-attribution">repository’s license and attribution</a>.</p></div></details>
+    </section>
+
+    <section class="citation shell" id="citation" aria-labelledby="citation-title">
+      <div class="section-heading"><div><p class="eyebrow">REFERENCE</p><h2 id="citation-title">Citation</h2></div><button type="button" class="button" id="copy-citation">Copy BibTeX</button></div>
+      <pre><code id="bibtex">@inproceedings{yi2026fill2sr,
+  author={Yi, Xingfu and Yu, Xiaoxue},
+  title={{Fill2SR}: Repurposing Inpainting Diffusion Transformers for Real-World Super-Resolution},
+  booktitle={Computer Vision -- ECCV 2026},
+  year={2026},
+  doi={10.1007/978-3-032-37556-8_24}
+}</code></pre><p id="copy-status" class="sr-only" role="status"></p>
+    </section>
+  </main>
+  <dialog class="figure-dialog" id="figure-dialog" aria-labelledby="figure-dialog-title">
+    <div class="figure-dialog-bar"><h2 id="figure-dialog-title">Paper figure</h2><div><button type="button" class="tool active" id="figure-width" aria-pressed="true">Full width</button><button type="button" class="tool" id="figure-fit" aria-pressed="false">Whole image</button><button type="button" class="tool" id="figure-close" aria-label="Close enlarged figure">Close ×</button></div></div>
+    <div class="figure-dialog-body" id="figure-dialog-body" data-view="width" tabindex="0" aria-label="Enlarged paper figure; scroll to explore"><img id="figure-dialog-image" alt="" role="button" tabindex="0" aria-label="Close enlarged image" title="Click to close" draggable="false"></div>
+    <p class="figure-dialog-note" id="figure-dialog-note">Scroll to explore the full figure. Click or tap the image to close.</p>
+  </dialog>
+  <footer class="shell"><a class="wordmark" href="#">Fill2SR<span class="brand-dot">.</span></a><p>ECCV 2026 · Xingfu Yi &amp; Xiaoxue Yu</p><a href="mailto:yixingfu.research@gmail.com">Contact ↗</a></footer>
+</body>
+</html>

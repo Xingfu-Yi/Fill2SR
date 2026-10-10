@@ -1,0 +1,186 @@
+{
+  "description": "Uncropped display derivatives of the original paper figures. PNG originals remain in assets/.",
+  "conversion": "RGB, full-frame Lanczos resize to at most 2400 px wide, WebP quality 94.",
+  "figures": [
+    {
+      "id": "teaser",
+      "source": "assets/teaser.png",
+      "source_size": [
+        3917,
+        2258
+      ],
+      "source_sha256": "f53875807699e94efd1a1aed70fc41699c61efd38deba49bd59dad0e1ac72d20",
+      "preview": "assets/paper/teaser.webp",
+      "preview_size": [
+        2400,
+        1384
+      ],
+      "preview_sha256": "d540467d816bde1fe3eadb0c719da0471bde26b6c2a693ed433dc146a3dae446",
+      "original_pdf": "results/teaser_ultimate.pdf",
+      "original_pdf_sha256": "d0ebac44530cb95de33f6e863276d6eaf4f65ff01a7302bb443dbf1ddf5a041b",
+      "arxiv_appendix_figure": null
+    },
+    {
+      "id": "qingming_12k",
+      "source": "assets/qingming_12k.png",
+      "source_size": [
+        4480,
+        2223
+      ],
+      "source_sha256": "dfc865ff2d8ca7d460a7ba3235feb7ae38aea028084fa57f22c66b78b3a0e49b",
+      "preview": "assets/paper/qingming_12k.webp",
+      "preview_size": [
+        2400,
+        1191
+      ],
+      "preview_sha256": "2db49380a89de9118c7409ae633e997e096dfd78f20c3f0d9be573bd4ac30f04",
+      "original_pdf": "results/supp_12k_2row_grid.pdf",
+      "original_pdf_sha256": "c5a5782d77cace9ca2505344b6bde280dc7bad7e330984ff3071c1f3a565ae70",
+      "arxiv_appendix_figure": "A1"
+    },
+    {
+      "id": "real_world_comparison",
+      "source": "assets/real_world_comparison.png",
+      "source_size": [
+        4194,
+        5051
+      ],
+      "source_sha256": "defb239c136b5084dd4ac7c988dc00be9a2a145d82d49959c281529a5f03f544",
+      "preview": "assets/paper/real_world_comparison.webp",
+      "preview_size": [
+        2400,
+        2890
+      ],
+      "preview_sha256": "b7f9544a7082414311432e12f4c7a819fc5a91308c5e1a4ee82f303ef62be84d",
+      "original_pdf": "results/real_world_comparison.pdf",
+      "original_pdf_sha256": "8ae9ec3899fd2bf74866d2713072e188b1df53f8a1dd91a26d37c7ce8f58c2a7",
+      "arxiv_appendix_figure": null
+    },
+    {
+      "id": "synthetic_comparison",
+      "source": "assets/synthetic_comparison.png",
+      "source_size": [
+        4982,
+        5830
+      ],
+      "source_sha256": "f42c301fa121c43cba8c1d7554f9c09136176c97c26c5b4891f4078e9eebe7f7",
+      "preview": "assets/paper/synthetic_comparison.webp",
+      "preview_size": [
+        2400,
+        2809
+      ],
+      "preview_sha256": "1fe06046b97022f3cce5938bcc65425e9a1487f502689ab3d35d672147a0d677",
+      "original_pdf": "results/synthetic_comparison.pdf",
+      "original_pdf_sha256": "44562292a37496a9b7d63bcd32a5daab27659113051f71817e2e69e340b661bc",
+      "arxiv_appendix_figure": "A8"
+    },
+    {
+      "id": "real_world_examples_1",
+      "source": "assets/real_world_examples_1.png",
+      "source_size": [
+        4060,
+        6158
+      ],
+      "source_sha256": "8c8eed5a922ca445d51ab4ed8952c28edbefd1ba99ddbcbcca6150436957fb02",
+      "preview": "assets/paper/real_world_examples_1.webp",
+      "preview_size": [
+        2400,
+        3640
+      ],
+      "preview_sha256": "3d26f6be575d296f88035b6f2e7e7cceb3e80dd842ce53424269a200b3314f4b",
+      "original_pdf": "results/full_vs_grid_page2.pdf",
+      "original_pdf_sha256": "0268890ef71db12663b627fd1b9c9937c8c081fc3f363671e7c43fb748bc8bf1",
+      "arxiv_appendix_figure": "A4"
+    },
+    {
+      "id": "real_world_examples_2",
+      "source": "assets/real_world_examples_2.png",
+      "source_size": [
+        4060,
+        6158
+      ],
+      "source_sha256": "0157647726879d0144876745c276277ede4f2c96258b4c083e3cee54d2beb0d7",
+      "preview": "assets/paper/real_world_examples_2.webp",
+      "preview_size": [
+        2400,
+        3640
+      ],
+      "preview_sha256": "1b35cbb60b9fc4e1527838d2015134cc5ab1db895c290a3146180ea45f33173e",
+      "original_pdf": "results/full_vs_grid_page4.pdf",
+      "original_pdf_sha256": "d6b685ef12d3069cb5ee20f178b2ed0b302d1e3b5804ff22c89c6e940f1f442f",
+      "arxiv_appendix_figure": "A5"
+    },
+    {
+      "id": "real_world_examples_3",
+      "source": "assets/real_world_examples_3.png",
+      "source_size": [
+        4060,
+        6158
+      ],
+      "source_sha256": "ed897833ae08906a33d92a78cf249136bc596b9ba328552e30d99854a2ca3138",
+      "preview": "assets/paper/real_world_examples_3.webp",
+      "preview_size": [
+        2400,
+        3640
+      ],
+      "preview_sha256": "1e22cbb51cd24b39eb4782a011ea798be71141662cb24283e16ecb61a0b8c6f7",
+      "original_pdf": "results/full_vs_grid_page5.pdf",
+      "original_pdf_sha256": "dac131b574fa2be2de0ee6e3a353363e0c71aac48805a300b505da6215de41a4",
+      "arxiv_appendix_figure": "A6"
+    },
+    {
+      "id": "real_world_examples_4",
+      "source": "assets/real_world_examples_4.png",
+      "source_size": [
+        2400,
+        3641
+      ],
+      "source_sha256": "86eb0d11dabdac9e7a6b08cb291fbe20e65fe20f1a4644e394d5917568ed4093",
+      "preview": "assets/paper/real_world_examples_4.webp",
+      "preview_size": [
+        2400,
+        3641
+      ],
+      "preview_sha256": "cd347d3558ca5256b09a05d1de095868656cf6a0f2faddbe3cbe13301e441773",
+      "original_pdf": "results/full_vs_grid_page1.pdf",
+      "original_pdf_sha256": "c7bea66bfe0ae0a0f3dfb816658a5dfb1ce4064953496e97fd884c3e644a0e45",
+      "arxiv_appendix_figure": "A3"
+    },
+    {
+      "id": "real_world_examples_5",
+      "source": "assets/real_world_examples_5.png",
+      "source_size": [
+        2400,
+        3641
+      ],
+      "source_sha256": "ae198e1ac4b8b0cb4983a21fb9a423bd8f5d173c3c38669519126046cbd3752d",
+      "preview": "assets/paper/real_world_examples_5.webp",
+      "preview_size": [
+        2400,
+        3641
+      ],
+      "preview_sha256": "c7b39f31916faccf8015102c56802aa9593fc38144fa58e3d4556aec52fe72d8",
+      "original_pdf": "results/full_vs_grid_page6.pdf",
+      "original_pdf_sha256": "5583811e74c0ea20a805d35a3017b37bd20721390d9e7ef2321604d0199342ab",
+      "arxiv_appendix_figure": "A7"
+    },
+    {
+      "id": "rcdt_pipeline",
+      "source": "assets/rcdt_pipeline.png",
+      "source_size": [
+        2400,
+        1659
+      ],
+      "source_sha256": "28d9f68b86001ac94bda8f83bc153e1438016ebba9cb76085595f605c4244070",
+      "preview": "assets/paper/rcdt_pipeline.webp",
+      "preview_size": [
+        2400,
+        1659
+      ],
+      "preview_sha256": "4496472f4c00f92caece218a15bcd697f0c01df2d73d378c75b6363de864da14",
+      "original_pdf": "results/RCDT_optimized.pdf",
+      "original_pdf_sha256": "daca387223ec69d8fefb5b85f934f2ea4524d7e3d99e1a4d5238b076c7d379c4",
+      "arxiv_appendix_figure": "A2"
+    }
+  ]
+}

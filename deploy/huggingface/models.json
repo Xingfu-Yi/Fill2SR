@@ -1,0 +1,20 @@
+{
+  "fill": {
+    "repo_id": "black-forest-labs/FLUX.1-Fill-dev",
+    "revision": "358293da0354175698b67ec8299acf928313a78a",
+    "allow_patterns": ["model_index.json", "scheduler/*", "text_encoder/*", "text_encoder_2/*", "tokenizer/*", "tokenizer_2/*", "transformer/*", "vae/*"]
+  },
+  "redux": {
+    "repo_id": "black-forest-labs/FLUX.1-Redux-dev",
+    "revision": "c95859fbf7703ca4d6824b4da4407d7cd0434f81",
+    "allow_patterns": ["model_index.json", "feature_extractor/*", "image_encoder/*", "image_embedder/*"]
+  },
+  "lora": {
+    "download": {
+      "repo_id": "yixingfu/Fill2SR",
+      "filename": "sr-full.safetensors",
+      "revision": "db3bc8574bd855db1b52d3dcec8e9ae9704c4529"
+    },
+    "sha256": "713a7c8e6cf6ca4265b0d699ecaff1dc0d13039b6ac171431dc68c3af695fbe6"
+  }
+}

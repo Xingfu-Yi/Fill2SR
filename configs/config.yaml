@@ -1,0 +1,4 @@
+paths:
+  flux_fill_dir: models/FLUX.1-Fill-dev
+  flux_redux_dir: models/FLUX.1-Redux-dev
+  model_sr: models/sr-full.safetensors
